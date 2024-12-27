@@ -1,0 +1,83 @@
+.container {
+  min-height: 100vh;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px; /* Set your desired height for the hero section */
+}
+.hero img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.memes {
+  /* Additional styles for the memes section */
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.button {
+  width: 6rem; /* Adjust the size */
+  height: 6rem; /* Adjust the size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #947a4e;
+  color: white;
+  font-bold: bold;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 0; /* Square corners */
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  animation: rainbow 3s linear infinite;
+  opacity: 0;
+}
+.button:hover::before {
+  opacity: 1;
+}
+.button:focus::before {
+  opacity: 1;
+}
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
